@@ -15,7 +15,7 @@ int main(){
 	scalar = 10;
 	omp_set_num_threads(3);
 
-	#pragma omp parallel for
+	#pragma omp parallel for shared(vector,scalar)
 
 	for (i=0;i<n;i++){
 		result[i] = vector[i] + scalar;

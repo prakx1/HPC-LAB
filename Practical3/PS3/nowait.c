@@ -29,8 +29,8 @@ int a[1000];
   }
   
   
-//   for(int i=0;i<1000;i++)
-//     printf("%d ",c[i]);
+  for(int i=0;i<1000;i++)
+    printf("%d ",c[i]);
     
 //   printf("\n \n %d Times loop executed",count);
   printf("\n Using %d no of threads with chunk size=%d and %f execution time\n",threads,CHUNK,omp_get_wtime() - time);

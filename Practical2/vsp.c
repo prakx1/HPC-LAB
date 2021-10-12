@@ -13,8 +13,6 @@ int main()
 	
 	scalar=10;
 	
-	
-	
 	#pragma omp parallel for firstprivate(vector,scalar) num_threads(3)
 	for(i=0;i<n;i++)
 	{
