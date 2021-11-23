@@ -19,9 +19,9 @@ int main(int argc, char *argv[])
             next = 0;
 
       MPI_Irecv(&buf[0], 1, MPI_INT, prev, tag1, MPI_COMM_WORLD, &reqs[0]);
-      printf("Process %d received with tag %d from process %d\n", prev, tag1,rank);
+      printf("Process %d received  with tag %d from process %d\n", prev ,tag1,rank);
       MPI_Irecv(&buf[1], 1, MPI_INT, next, tag2, MPI_COMM_WORLD, &reqs[1]);
-      printf("Process %d received with tag %d from process %d\n", next, tag2,rank);
+      printf("Process %d received  with tag %d from process %d\n", next,tag2,rank);
 
       MPI_Isend(&rank, 1, MPI_INT, prev, tag2, MPI_COMM_WORLD, &reqs[2]);
       MPI_Isend(&rank, 1, MPI_INT, next, tag1, MPI_COMM_WORLD, &reqs[3]);

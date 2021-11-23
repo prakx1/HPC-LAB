@@ -7,6 +7,7 @@ int main()
     int prod_arr[6] = {1,2,4,5,6,7};
     MPI_Init(NULL, NULL);
     int size_world, my_rank;
+    
     size_t n = sizeof(prod_arr)/sizeof(prod_arr[0]);
 
     //initilaizing product
@@ -32,7 +33,7 @@ int partial_prod = 1;
     
     MPI_Reduce(&partial_prod, &product, 1, MPI_INT, MPI_PROD, 0, MPI_COMM_WORLD);
 
-     if (my_rank == 0)
+ if (my_rank == 0)
  {
  	printf("Product  of array is : %d\n", product); 
  } 
